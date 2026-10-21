@@ -1,99 +1,159 @@
 <!DOCTYPE html>
 <html lang="en-ca">
-<head>
-  <title>Exercise 5: CSS Layout</title>
-  <meta charset="utf-8">
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-    }
+  <head>
+    <title>Exercise 5: CSS Layout</title>
+    <!--Created by Haris Alam on Wed, Oct 21 2026 -->
+    <meta charset="utf-8">
 
-    header {
-      padding: 30px;
-      margin-bottom: 0;
-    }
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
 
-    .badge {
-      padding: 5px 15px;
-      font-size: 0.8em;
-      font-weight: bold;
-    }
+      body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 16px;
+        line-height: 1.6;
+        background-color: gray;
+        color: white;
 
-    #main-content {
-      padding: 0;
-      vertical-align: top;
-    }
 
-    #main-content h2 {
-      margin-top: 0;
-    }
+      }
 
-    #main-content p {
-      margin-bottom: 15px;
-    }
+      h1,
+      h2,
+      h3 {
+        font-family: Arial, sans-serif;
+      }
 
-    #sidebar {
-      padding: 20px;
-      vertical-align: top;
-    }
+      header {
+        position: relative;
+        margin-bottom: 22px;
+        background-color: darkgrey;
+        color: white;
+        padding: 10px;
+        border: 3px solid black;
+      }
 
-    #sidebar h3 {
-      margin-top: 0;
-      font-size: 1.2em;
-    }
+      header h1 {
+        margin: 0;
+        font-size: 2.7em;
+        letter-spacing: 0.5px;
+      }
 
-    #sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
+      .badge {
+        position: absolute;
+        top: 23px;
+        right: 20px;
+        background-color: lightgreen;
+        color: black;
+        padding: 8px 12px;
+        font-size: 0.8em;
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 12px;
+        width: 120px;
+      }
 
-    #sidebar li {
-      padding: 8px 0;
-    }
+      #main-content {
+        display: inline-block;
+        width: 65%;
+        padding: 22px;
+        background-color: white;
+        color: black;
+        border: 3px solid black;
+      }
 
-    footer {
-      padding: 20px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>My Design Blog</h1>
-    <div class="badge">Featured Post</div>
-  </header>
+      #main-content h2 {
+        margin-top: 0px;
+        padding: 0px;
+        margin-bottom: 20px;
+        background-color: white;
+        color: black;
+        vertical-align: top;
+        border-bottom: 1px solid black;
+      }
 
-  <div id="main-content">
-    <h2>Understanding CSS Layout</h2>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      #main-content p {
+        margin-bottom: 15px;
+      }
+
+      #sidebar {
+        display: inline-block;
+        float: right;
+        width: 30%;
+        margin-left: 4%;
+        padding: 30px;
+        background-color: lightblue;
+        color: black;
+        vertical-align: top;
+        border: 3px solid black;
+      }
+
+      #sidebar h3 {
+        margin-top: 0;
+        font-size: 1.2em;
+        color: black;
+      }
+
+      #sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      #sidebar li {
+        padding: 8px 0;
+        border-bottom: 1px solid black;
+      }
+
+      #sidebar li:last-child {
+        border-bottom: none;
+      }
+
+      footer {
+        padding: 20px;
+        margin-top: 20px;
+        background-color: lightblue;
+        color: black;
+        position: sticky;
+        bottom: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Design Blog</h1>
+      <div class="badge">Featured Post</div>
+    </header>
+
+    <div id="main-content">
+      <h2>Understanding CSS Layout</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p>Fusce id ullamcorper elit. Morbi sed nisl auctor, lobortis metus at, lacinia turpis. Fusce ornare commodo neque condimentum commodo. Aenean elementum tincidunt quam non pulvinar. Praesent enim sem, sagittis nec ex pretium, tempor tincidunt est. In hac habitasse platea dictumst. Maecenas et neque sit amet metus consequat mollis. Nunc non dolor scelerisque, scelerisque nunc nec, feugiat mi. Aliquam efficitur dictum lorem dictum faucibus.</p>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque luctus magna in luctus. Nullam non cursus mi. In et orci tellus. Quisque eget rutrum dolor, pulvinar tincidunt massa. Maecenas sit amet libero eget ligula aliquet aliquam id ultrices mi. Pellentesque vel turpis sem. Aliquam varius accumsan fermentum. Maecenas quis metus elit. Sed nec dui odio. In hac habitasse platea dictumst. Ut venenatis ac nibh sollicitudin tempor. Aliquam mollis nibh a quam accumsan, sit amet vehicula ex pretium. Vivamus lobortis ac eros eu varius. Proin et lectus metus.</p>
       <p>Phasellus rhoncus placerat viverra. Quisque interdum aliquet risus eu facilisis. Etiam vitae ipsum non tortor consectetur congue nec at mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean molestie lectus sit amet pellentesque volutpat. Maecenas nisi urna, iaculis id est sed, eleifend gravida nibh. Praesent fringilla nisl sed varius venenatis. Nam et cursus sapien, et molestie tortor. Praesent feugiat justo quam, non mollis ante malesuada vestibulum. Praesent cursus nunc neque, ut dignissim tortor mollis eu. Curabitur pretium lorem quis nibh volutpat aliquet. Phasellus ac dui non libero sagittis mollis. Fusce vel odio gravida, consequat lorem id, lobortis libero. Praesent id lacinia lectus.</p>
-  </div>
+    </div>
 
-  <div id="sidebar">
-    <h3>Recent Posts</h3>
-    <ul>
-      <li>Getting Started with CSS</li>
-      <li>HTML Fundamentals</li>
-      <li>Web Design Principles</li>
-      <li>Color Theory Basics</li>
-      <li>Typography on the Web</li>
-    </ul>
-  </div>
+    <div id="sidebar">
+      <h3>Recent Posts</h3>
+      <ul>
+        <li>Getting Started with CSS</li>
+        <li>HTML Fundamentals</li>
+        <li>Web Design Principles</li>
+        <li>Color Theory Basics</li>
+        <li>Typography on the Web</li>
+      </ul>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 My Design Blog. All rights reserved.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 My Design Blog. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
